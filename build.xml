@@ -1,0 +1,25 @@
+<project name="build" basedir="." default="default">
+	
+	<property file="build.properties" />
+	
+	<taskdef name="jscomp" classname="com.google.javascript.jscomp.ant.CompileTask" classpath="./build/compiler.jar" />
+	
+	<target name="default">
+		<antcall target="compress" />
+	</target>
+	
+	<target name="compress">
+		<jscomp compilationLevel="simple" warning="quiet" debug="false" output="./coverage.js">
+			<sources dir="./src">
+				<file name="File.js" />
+				<file name="JUnit.js" />
+				<file name="WaitFor.js" />
+				<file name="Template.js" />
+				<file name="Testsuite.js" />
+				<file name="Cobertura.js" />
+				<file name="Coverage.js" />
+			</sources>
+		</jscomp>
+	</target>
+	
+</project>

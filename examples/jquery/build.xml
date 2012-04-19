@@ -1,0 +1,40 @@
+<project name="build" basedir="." default="default">
+	
+	<target name="default">
+		<antcall target="prepare" />
+		<antcall target="coverage" />
+		<antcall target="run" />
+	</target>
+	
+	<target name="prepare">
+		<exec executable="../../build/phantomjs" failonerror="true">
+			<arg line="../../coverage.js" />
+			<arg line="prepare" />
+			<arg line="tests" />
+			<arg line="--src src" />
+			<arg line="--libs libs" />
+			<arg line="--templates ../../templates" />
+		</exec>
+	</target>
+	
+	<target name="coverage">
+		<exec executable="../../build/jscoverage" failonerror="true">
+			<arg line="build/src" />
+			<arg line="build/bin" />
+		</exec>
+	</target>
+	
+	<target name="run">
+		<exec executable="../../build/phantomjs" failonerror="true">
+			<arg line="../../coverage.js" />
+			<arg line="run" />
+			<arg line="tests" />
+			<arg line="--libs libs" />
+			<arg line="--qunit ../../lib" />
+			<arg line="--templates ../../templates" />
+			<arg line="--junit reports/junit.xml" />
+			<arg line="--cobertura reports/cobertura.xml" />
+		</exec>
+	</target>
+	
+</project>
