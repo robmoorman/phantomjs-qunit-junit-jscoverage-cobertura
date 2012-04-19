@@ -4,12 +4,12 @@
 
 * [PhantomJS executable](http://www.phantomjs.org/)
 * [JSCoverage executable](http://siliconforks.com/jscoverage/)
-* [QUnit.js, QUnit.css and QUnit-coverage.js](https://github.com/moorinteractive/phantomjs-qunit-junit/tree/master/lib/)
-* [Coverage.js](https://github.com/moorinteractive/phantomjs-qunit-junit/blob/master/coverage.js)
+* [QUnit.js, QUnit.css and QUnit-coverage.js](https://github.com/moorinteractive/phantomjs-qunit-junit-jscoverage-cobertura/tree/master/lib/)
+* [Coverage.js](https://github.com/moorinteractive/phantomjs-qunit-junit-jscoverage-cobertura/blob/master/coverage.js)
 
 ## Usage
 
-In prior to record the coverage of the QUnit tests for your application related Javascripts we are obliged to initialize the coverage environment on our local filesystem. Therefore we use the PhantomJS executable, the best way to see this in action is to look at our [Ant task example](https://github.com/moorinteractive/phantomjs-qunit-junit/blob/master/examples/jquery/build.xml):
+In prior to record the coverage of the QUnit tests for your application related Javascripts we are obliged to initialize the coverage environment on our local filesystem. Therefore we use the PhantomJS executable, the best way to see this in action is to look at our [Ant task example](https://github.com/moorinteractive/phantomjs-qunit-junit-jscoverage-cobertura/blob/master/examples/jquery/build.xml):
 
 ### Step 1: initialize the environment
 
@@ -27,5 +27,5 @@ In prior to record the coverage of the QUnit tests for your application related 
 
 The output files can directly be used by CI tools like [Jenkins](http://jenkins-ci.org/).
 
-* [Example of exported JUnit report for QUnit tests](https://github.com/moorinteractive/phantomjs-qunit-junit/blob/master/examples/jquery/reports/junit.xml)
-* [Example of exported Cobertura report for coverage](https://github.com/moorinteractive/phantomjs-qunit-junit/blob/master/examples/jquery/reports/cobertura.xml)
+* [Example of exported JUnit report for QUnit tests](https://github.com/moorinteractive/phantomjs-qunit-junit-jscoverage-cobertura/blob/master/examples/jquery/reports/junit.xml)
+* [Example of exported Cobertura report for coverage](https://github.com/moorinteractive/phantomjs-qunit-junit-jscoverage-cobertura/blob/master/examples/jquery/reports/cobertura.xml)
