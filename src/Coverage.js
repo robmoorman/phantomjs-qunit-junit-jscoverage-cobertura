@@ -131,6 +131,11 @@ var Coverage = {
 	run: function() {
 		this.testSuite = Testsuite.get( this.args[ 1 ]);
 		
+		// copy optional mockup data
+		if( this.options.mockups ) {
+			File.fs.copyTree( this.options.mockups, this.testSuite.binPath + "/mockups" );
+		}
+		
 		File.copy( this.testSuite.tests, this.testSuite.binPath, true, this.args[ 0 ]);
 		File.copy( File.scan( this.options.libs ), this.testSuite.binPath, true, this.options.libs );
 		File.copy([  this.options.qunit + "/qunit.js", this.options.qunit + "/qunit-coverage.js", this.options.qunit + "/qunit.css" ], this.testSuite.binPath );
