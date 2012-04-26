@@ -13,15 +13,15 @@ In prior to record the coverage of the QUnit tests for your application related 
 
 ### Step 1: initialize the environment
 
-***path/to/phantomjs*** *path/to/coverage.js* prepare *path/to/tests* --src *path/to/application/src* --libs *path/to/libraries* --templates *path/to/templates*
+***path/to/phantomjs*** *path/to/coverage.js* prepare --config *path/to/config.js*
 
 ### Step 2: initialize jscoverage
 
-***path/to/jscoverage*** build/src build/bin
+***path/to/jscoverage*** build-tmp/src build-tmp/bin
 
 ### Step 3: generate junit and cobertura reports
 
-***path/to/phantomjs*** *path/to/coverage.js* run *path/to/tests* --libs *path/to/libraries* --qunit *path/to/(qunit.js,qunit.css,qunit-coverage.js)* --templates *path/to/templates* --junit *path/to/junit-output.xml* --cobertura *path/to/cobertura-output.xml*
+***path/to/phantomjs*** *path/to/coverage.js* run --config *path/to/config.js*
 
 ## Output files
 

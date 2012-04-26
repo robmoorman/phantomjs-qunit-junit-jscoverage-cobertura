@@ -9,14 +9,16 @@
 	</target>
 	
 	<target name="compress">
+		<delete>
+			<fileset dir="." includes="coverage.js" />
+		</delete>
 		<jscomp compilationLevel="simple" warning="quiet" debug="false" output="./coverage.js">
 			<sources dir="./src">
-				<file name="File.js" />
-				<file name="JUnit.js" />
-				<file name="WaitFor.js" />
-				<file name="Template.js" />
-				<file name="Testsuite.js" />
-				<file name="Cobertura.js" />
+				<file name="report/Cobertura.js" />
+				<file name="report/JUnit.js" />
+				<file name="helper/WaitFor.js" />
+				<file name="helper/File.js" />
+				<file name="helper/Template.js" />
 				<file name="Coverage.js" />
 			</sources>
 		</jscomp>

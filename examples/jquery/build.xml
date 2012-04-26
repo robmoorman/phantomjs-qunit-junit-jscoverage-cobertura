@@ -10,17 +10,14 @@
 		<exec executable="../../build/phantomjs" failonerror="true">
 			<arg line="../../coverage.js" />
 			<arg line="prepare" />
-			<arg line="tests" />
-			<arg line="--src src" />
-			<arg line="--libs libs" />
-			<arg line="--templates ../../templates" />
+			<arg line="--config config.js" />
 		</exec>
 	</target>
 	
 	<target name="coverage">
 		<exec executable="../../build/jscoverage" failonerror="true">
-			<arg line="build/src" />
-			<arg line="build/bin" />
+			<arg line="build-tmp/src" />
+			<arg line="build-tmp/bin" />
 		</exec>
 	</target>
 	
@@ -28,12 +25,7 @@
 		<exec executable="../../build/phantomjs" failonerror="true">
 			<arg line="../../coverage.js" />
 			<arg line="run" />
-			<arg line="tests" />
-			<arg line="--libs libs" />
-			<arg line="--qunit ../../lib" />
-			<arg line="--templates ../../templates" />
-			<arg line="--junit reports/junit.xml" />
-			<arg line="--cobertura reports/cobertura.xml" />
+			<arg line="--config config.js" />
 		</exec>
 	</target>
 	
