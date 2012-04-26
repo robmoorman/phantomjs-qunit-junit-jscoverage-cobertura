@@ -1,10 +1,10 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <testsuite tests='3' failures='1' disabled='0' errors='0' time='0.011' name='tests'>
 	<testsuite tests='1' failures='0' disabled='0' errors='0' time='0' name=''>
-		<testcase name='applicationIsInitialized' status='pass' time='0.005' classname='' />
+		<testcase name='applicationIsInitialized' status='pass' time='0.004' classname='' />
 	</testsuite>
 	<testsuite tests='2' failures='1' disabled='0' errors='0' time='0.007' name='views'>
 		<testcase name='itemIsAdded' status='fail' time='0.003' classname='views' />
-		<testcase name='viewIsAddedToBody' status='pass' time='0.003' classname='views' />
+		<testcase name='viewIsAddedToBody' status='pass' time='0.004' classname='views' />
 	</testsuite>
 </testsuite>

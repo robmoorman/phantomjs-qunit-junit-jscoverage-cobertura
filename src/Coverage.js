@@ -65,11 +65,11 @@ var Coverage = {
 	},
 	
 	createReports: function() {
-		var cobertura = Cobertura.generateReport( this.page, this.options );
 		var junit = JUnit.generateReport( this.page, this.options );
+		var cobertura = Cobertura.generateReport( this.page, this.options );
 		
-		File.save( Config.output.cobertura, cobertura );
 		File.save( Config.output.junit, junit );
+		File.save( Config.output.cobertura, cobertura );
 	},
 	
 	isTestCompeted: function() {
