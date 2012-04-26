@@ -1,4 +1,4 @@
-# PhantomJS QUnit JUnit
+# PhantomJS QUnit JUnit JSCoverage Cobertura
 
 ## Requirements
 
