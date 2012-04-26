@@ -23,6 +23,44 @@ In prior to record the coverage of the QUnit tests for your application related 
 
 ***path/to/phantomjs*** *path/to/coverage.js* run --config *path/to/config.js*
 
+## Configuration.js
+
+<pre>
+var Config = {
+
+    // path of the temporary direcotry to store coverage files in
+    // this directory is automatically removed by this tool.
+    target: "build-tmp",
+
+    // path to the direcotry containing the testrunner.html
+    templates: "coverage/templates",
+
+    src: {
+       // application related javascripts (which are measured by the coveragetool)
+       application: "src",
+
+       // library javascripts used by the application (which are not measured)
+       libraries: "libs",
+
+       // path to the directory containing all your qunit tests
+       tests: "tests",
+
+       // path to the directory containing the qunit.css, qunit.jss and qunit-coverage.js
+       qunit: "coverage/lib",
+
+       // path to the directory with all your mockupdata used bu your qunit tests
+       mockups: "mockups"
+    },
+
+    // paths where to export you junit and cobertura results
+    output: {
+        junit: "reports/junit.xml",
+        cobertura: "reports/cobertura.xml"
+    }
+
+};
+</pre>
+
 ## Output files
 
 The output files can directly be used by CI tools like [Jenkins](http://jenkins-ci.org/).
