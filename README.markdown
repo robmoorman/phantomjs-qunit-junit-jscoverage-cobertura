@@ -28,11 +28,11 @@ In prior to record the coverage of the QUnit tests for your application related 
 <pre>
 var Config = {
 
-    // path of the temporary direcotry to store coverage files in
-    // this directory is automatically removed by this tool.
+    // path of the temporary directory to store coverage files in (bin and src subdirs are created).
+    // this directory is automatically removed by this tool, it's just required for the coverage executable.
     target: "build-tmp",
 
-    // path to the direcotry containing the testrunner.html
+    // path to the directory containing the testrunner.html
     templates: "coverage/templates",
 
     src: {
