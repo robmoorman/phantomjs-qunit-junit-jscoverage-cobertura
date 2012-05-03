@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE coverage SYSTEM 'http://cobertura.sourceforge.net/xml/coverage-03.dtd'>
+<coverage line-rate='0.75' branch-rate='0' version='3.5.1' timestamp='1335871522618'>
+	<sources/>
+	<packages>
+		<package name='' line-rate='1' branch-rate='0' complexity='0'>
+			<classes>
+				<class name='application.js' filename='./src/application.js' line-rate='1' branch-rate='0'>
+					<lines>
+						<line number='1' hits='1' branch='false' />
+						<line number='8' hits='1' branch='false' />
+					</lines>
+				</class>
+			</classes>
+		</package>
+		<package name='models' line-rate='0.5' branch-rate='0' complexity='0'>
+			<classes>
+				<class name='models/application.model.js' filename='./src/models/application.model.js' line-rate='0.5' branch-rate='0'>
+					<lines>
+						<line number='1' hits='1' branch='false' />
+						<line number='9' hits='0' branch='false' />
+					</lines>
+				</class>
+			</classes>
+		</package>
+	</packages>
+</coverage>
