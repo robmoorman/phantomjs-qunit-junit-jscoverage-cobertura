@@ -25,7 +25,6 @@ var JUnit = {
 				var test = module.tests[ testName ];
 				
 				lines.push( "\t\t<testcase name='" + testName + "' status='" + ( test.success ? "pass" : "fail" ) + "' time='" + ( test.time / 1000 ) + "' classname='" + moduleName + "'>" );
-				lines.push( "\t\t\t<skipped />" );
 				
 				for( var failure in test.failures ) {
 				    lines.push( "\t\t\t<failure message='" + test.failures[ failure ].message + "' type='" + test.failures[ failure ].type + "' />" );
