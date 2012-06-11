@@ -39,7 +39,10 @@ var Coverage = {
 		this.fs.copy( Config.src.qunit + "/qunit.css", Config.target + "/bin/qunit.css" );
 		this.fs.copy( Config.src.qunit + "/qunit.js", Config.target + "/bin/qunit.js" );
 		this.fs.copy( Config.src.qunit + "/qunit-coverage.js", Config.target + "/bin/qunit-coverage.js" );
-		this.fs.copyTree( Config.src.mockups, Config.target + "/bin" );
+		
+		if( Config.src.mockups && this.fs.exists( Config.src.mockups )) {
+		    this.fs.copyTree( Config.src.mockups, Config.target + "/bin" );
+	    }
 		
 		this.page = new WebPage();
 		this.page.onConsoleMessage = function( value ) {
