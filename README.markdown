@@ -35,6 +35,9 @@ var Config = {
     // path to the directory containing the testrunner.html
     templates: "coverage/templates",
 
+	// whether to ignore test failures or to break the build in case of test failures
+	ignoreFailures: true,
+
     src: {
        // application related javascripts (which are measured by the coveragetool)
        application: "src",
